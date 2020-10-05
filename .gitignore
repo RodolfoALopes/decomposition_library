@@ -1,3 +1,19 @@
+# Build directories
+build
+cmake-build-debug
+cmake-build-release
+cmake-build-*
+build*/
+out
+
+# IDE settings
+.idea
+codealike.json
+.vs
+CMakeLists.txt.user
+CMakeSettings.json
+gh-md-toc
+
 # Prerequisites
 *.d
 
