@@ -3,6 +3,7 @@
 #include "extended_differential_grouping_method.h"
 
 using namespace decompose;
+using namespace std;
 
 void extended_differential_grouping_method::analyze(problem &problem_, options &options_, criteria &criteria_) {
     criteria_.reset();

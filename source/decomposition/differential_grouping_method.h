@@ -6,10 +6,10 @@
 
 namespace decompose {
     class differential_grouping_method : public decomposition {
-    public:
-        differential_grouping_method() = default;
+        public:
+            differential_grouping_method() = default;
 
-        void analyze(problem &problem_, options &options_, criteria &criteria_) override;
+            void analyze(problem &problem_, options &options_, criteria &criteria_) override;
     };
 }
 

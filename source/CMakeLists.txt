@@ -14,6 +14,9 @@ add_library(libdecomposition
         decomposition/recursive_differential_grouping_1_method.h
         decomposition/recursive_differential_grouping_2_method.h
         decomposition/recursive_differential_grouping_3_method.h
+        decomposition/common.cpp
+        decomposition/problem.cpp
+        decomposition/solver.cpp
         decomposition/differential_grouping_method.cpp
         decomposition/differential_grouping_2_method.cpp
         decomposition/extended_differential_grouping_method.cpp

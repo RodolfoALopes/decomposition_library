@@ -1,6 +1,13 @@
 #include "recursive_differential_grouping_3_method.h"
 
 using namespace decompose;
+using namespace std;
+
+
+recursive_differential_grouping_3_method::recursive_differential_grouping_3_method() {
+    y1 = 0;
+    dim = 0;
+}
 
 scalar recursive_differential_grouping_3_method::gamma(double d){
     scalar muM = (std::numeric_limits<scalar>::epsilon())/2.0;

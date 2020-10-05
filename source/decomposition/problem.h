@@ -7,77 +7,36 @@
 #include <utility>
 #include <vector>
 
-using namespace std;
-
 namespace decompose {
     class problem {
 
     protected:
         size_t dim;
-        vector<scalar> lower_bound;
-        vector<scalar> upper_bound;
-        vector<set<size_t>> sub_problems;
+        std::vector<scalar> lower_bound;
+        std::vector<scalar> upper_bound;
+        std::vector<std::set<size_t>> sub_problems;
         bool problem_structure_is_known;
 
     public:
-        problem(size_t dim_, vector<scalar> lower_bound_, vector<scalar> upper_bound_) {
-            dim = dim_;
-            lower_bound = std::move(lower_bound_);
-            upper_bound = std::move(upper_bound_);
-            problem_structure_is_known = false;
-        }
+        problem(size_t dim_, std::vector<scalar> lower_bound_, std::vector<scalar> upper_bound_);
 
         virtual ~problem() = default;
 
-        virtual scalar value(const vector<scalar> &x) = 0;
+        virtual scalar value(const std::vector<scalar> &x) = 0;
 
-        bool is_known_problem_structure() const{
-            return problem_structure_is_known;
-        }
+        bool is_known_problem_structure() const;
 
-        void set_problem_structure(vector<set<size_t>> sub_problems_){
-            sub_problems.clear();
-            sub_problems = std::move(sub_problems_);
-            problem_structure_is_known = true;
-        }
+        void set_problem_structure(std::vector<std::set<size_t>> sub_problems_);
 
-        vector<set<size_t>> get_problem_structure(){
-            return sub_problems;
-        }
+        std::vector<std::set<size_t>> get_problem_structure();
 
-        size_t get_dim() const{
-            return dim;
-        }
+        size_t get_dim() const;
 
-        vector<scalar> get_lower_bound(){
-            return lower_bound;
-        }
+        std::vector<scalar> get_lower_bound();
 
-        vector<scalar> get_upper_bound(){
-            return upper_bound;
-        }
+        std::vector<scalar> get_upper_bound();
 
-        string print_sub_problem_structure(){
-            string structure = "[";
-            for(auto & sub_problem : sub_problems){
-                structure += "[";
-                auto it = sub_problem.begin();
-                bool print = true;
-                while(print && !sub_problems.empty()){
-                    structure += to_string(*it);
-                    it++;
-                    if(it != sub_problem.end()){
-                        structure += ", ";
-                    }
-                    else{
-                        print = false;
-                    }
-                }
-                structure += "]";
-            }
-            structure += "]";
-            return structure;
-        }
+        std::string print_sub_problem_structure();
     };
 }
 #endif

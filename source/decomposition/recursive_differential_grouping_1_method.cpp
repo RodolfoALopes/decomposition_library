@@ -1,6 +1,13 @@
 #include "recursive_differential_grouping_1_method.h"
 
 using namespace decompose;
+using namespace std;
+
+recursive_differential_grouping_1_method::recursive_differential_grouping_1_method() {
+    y1 = 0;
+    dim = 0;
+    epsilon = 0;
+}
 
 void recursive_differential_grouping_1_method::generate_random_solution(problem &problem_, vector<scalar> &x) const {
     for (size_t i = 0; i < dim; i++) {

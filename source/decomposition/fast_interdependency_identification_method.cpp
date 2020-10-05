@@ -3,6 +3,7 @@
 #include "fast_interdependency_identification_method.h"
 
 using namespace decompose;
+using namespace std;
 
 void fast_interdependency_identification_method::diff(problem &problem_, vector<scalar> &x, scalar delta, const set<size_t>& indices, vector<scalar> &v, criteria &criteria_){
     scalar value_1 = problem_.value(x);
