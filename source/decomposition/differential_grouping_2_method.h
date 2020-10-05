@@ -1,8 +1,8 @@
 #ifndef DECOMPOSITION_LIBRARY_DECOMPOSITION_DIFFERENTIAL_GROUPING_2_METHOD_H
 #define DECOMPOSITION_LIBRARY_DECOMPOSITION_DIFFERENTIAL_GROUPING_2_METHOD_H
 
+#include "decomposition.h"
 #include <unordered_set>
-#include <decomposition.h>
 
 namespace decompose {
     class differential_grouping_2_method : public decomposition {

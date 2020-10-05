@@ -1,19 +1,19 @@
 #ifndef DECOMPOSITION_LIBRARY_DECOMPOSITION_H
 #define DECOMPOSITION_LIBRARY_DECOMPOSITION_H
 
-#include <common.h>
-#include <problem.h>
-#include <set>
+#include "common.h"
+#include "problem.h"
 #include <functional>
+#include <set>
 
 using namespace std;
 
 namespace decompose {
     class decomposition {
-    protected:
+      protected:
         debug_level m_debug = debug_level::None;
 
-    public:
+      public:
         virtual ~decomposition() = default;
 
         decomposition() = default;

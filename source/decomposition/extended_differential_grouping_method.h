@@ -1,8 +1,8 @@
 #ifndef DECOMPOSITION_LIBRARY_DECOMPOSITION_EXTENDED_DIFFERENTIAL_GROUPING_METHOD_H
 #define DECOMPOSITION_LIBRARY_DECOMPOSITION_EXTENDED_DIFFERENTIAL_GROUPING_METHOD_H
 
+#include "decomposition.h"
 #include <random>
-#include <decomposition.h>
 
 namespace decompose {
     class extended_differential_grouping_method : public decomposition {

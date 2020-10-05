@@ -1,11 +1,11 @@
 #ifndef DECOMPOSITION_LIBRARY_PROBLEM_H
 #define DECOMPOSITION_LIBRARY_PROBLEM_H
 
+#include "common.h"
 #include <iostream>
+#include <set>
 #include <utility>
 #include <vector>
-#include <set>
-#include <common.h>
 
 using namespace std;
 

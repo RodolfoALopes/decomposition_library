@@ -1,7 +1,7 @@
 #ifndef DECOMPOSITION_LIBRARY_DECOMPOSITION_FAST_INTERDEPENDECY_IDENTIFICATION_METHOD_H
 #define DECOMPOSITION_LIBRARY_DECOMPOSITION_FAST_INTERDEPENDECY_IDENTIFICATION_METHOD_H
 
-#include <decomposition.h>
+#include "decomposition.h"
 
 namespace decompose {
     class fast_interdependency_identification_method : public decomposition {

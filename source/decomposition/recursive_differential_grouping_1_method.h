@@ -1,7 +1,7 @@
 #ifndef DECOMPOSITION_LIBRARY_DECOMPOSITION_RECURSIVE_DIFFERENTIAL_GROUPING_1_METHOD_H
 #define DECOMPOSITION_LIBRARY_DECOMPOSITION_RECURSIVE_DIFFERENTIAL_GROUPING_1_METHOD_H
 
-#include <decomposition.h>
+#include "decomposition.h"
 
 namespace decompose {
     class recursive_differential_grouping_1_method : public decomposition {
