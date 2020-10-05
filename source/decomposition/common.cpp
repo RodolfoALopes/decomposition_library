@@ -108,7 +108,7 @@ void options::set_rdg_1_alpha(scalar s){
     rdg_1_alpha = s;
 }
 
-scalar options::get_rdg_3_epsilon_n() const{
+size_t options::get_rdg_3_epsilon_n() const{
     return rdg_3_epsilon_n;
 }
 
@@ -140,7 +140,7 @@ void criteria::reset() {
 void criteria::print(std::ostream &os) const {
     os << "Iterations:  " << iterations << std::endl;
     os << "Evaluations: " << evaluations << std::endl;
-    os << "f(x_best):   " << (scalar)fx_best << std::endl;
+    os << "f(x_best):   " << to_string(fx_best) << std::endl;
 }
 
 void stats::push(scalar fx, size_t e){

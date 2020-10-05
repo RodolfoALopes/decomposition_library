@@ -15,7 +15,7 @@ class problem_example : public problem {
 
         scalar value(const vector<scalar> &x) override {
             scalar sum = 0.0;
-            for(int i = 0; i < dim; i++){
+            for(size_t i = 0; i < dim; i++){
                 sum += pow(x[i], 2);
             }
             return sum;

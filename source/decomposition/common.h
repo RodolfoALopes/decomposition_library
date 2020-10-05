@@ -62,7 +62,7 @@ namespace decompose {
             size_t get_rg_number_groups() const;
             size_t get_rdg_1_k() const;
             scalar get_rdg_1_alpha() const;
-            scalar get_rdg_3_epsilon_n() const;
+            size_t get_rdg_3_epsilon_n() const;
             void set_dg_epsilon(scalar s);
             void set_fii_epsilon_1(scalar s);
             void set_fii_epsilon_2(scalar s);

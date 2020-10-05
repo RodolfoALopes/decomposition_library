@@ -21,7 +21,7 @@ public:
 
     scalar value(const std::vector<scalar> &x) override {
         size_t n_sub_problem = 2;
-        size_t size_sub_problem = floor((scalar)dim/n_sub_problem);
+        auto size_sub_problem = (size_t)floor((scalar)dim/n_sub_problem);
         std::vector<std::pair<size_t,size_t>> sub_problems_tmp;
         size_t k = 0;
         for(size_t i = 1; i < n_sub_problem; i++){
