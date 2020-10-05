@@ -1,11 +1,10 @@
-#include <iostream>
-#include <catch2/catch.hpp>
 #include "problem_examples/problem_example_1.h"
 #include "problem_examples/problem_example_2.h"
 #include "problem_examples/problem_example_3.h"
 #include "problem_examples/problem_example_4.h"
-#include "extended_differential_grouping_method.h"
-
+#include <catch2/catch.hpp>
+#include <decomposition/extended_differential_grouping_method.h>
+#include <iostream>
 
 TEST_CASE("Extended Differential Grouping - Separable Problem - Unit Test") {
     const string problem_structure = "[[0][1][2][3][4][5][6][7][8][9]]";

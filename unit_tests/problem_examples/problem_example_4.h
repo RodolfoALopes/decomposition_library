@@ -1,7 +1,7 @@
 #ifndef DECOMPOSITION_LIBRARY_PROBLEM_EXAMPLE_4_H
 #define DECOMPOSITION_LIBRARY_PROBLEM_EXAMPLE_4_H
 
-#include "problem.h"
+#include <decomposition/problem.h>
 
 /*
  * problem_example_4 class
