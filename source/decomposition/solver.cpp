@@ -25,8 +25,8 @@ stats &solver::get_stats() {
     return m_stats;
 }
 
-std::string solver::get_status_string(const status &s) {
-    std::string os;
+string solver::get_status_string(const status &s) {
+    string os;
     switch (s) {
     case status::IterationLimit: os += "Iteration limit reached."; break;
     case status::EvaluationLimit: os += "Function evaluation limit reached."; break;

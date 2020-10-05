@@ -137,10 +137,10 @@ void criteria::reset() {
     fx_best = max_limits();
 }
 
-void criteria::print(std::ostream &os) const {
-    os << "Iterations:  " << iterations << std::endl;
-    os << "Evaluations: " << evaluations << std::endl;
-    os << "f(x_best):   " << to_string(fx_best) << std::endl;
+void criteria::print(ostream &os) const {
+    os << "Iterations:  " << to_string(iterations) << endl;
+    os << "Evaluations: " << to_string(evaluations) << endl;
+    os << "f(x_best):   " << to_string(fx_best) << endl;
 }
 
 void stats::push(scalar fx, size_t e){
@@ -148,22 +148,22 @@ void stats::push(scalar fx, size_t e){
         stat s{};
         s.fx = fx;
         s.evaluation = e;
-        s.time = std::chrono::steady_clock::now() - starting_time;
+        s.time = chrono::steady_clock::now() - starting_time;
         history.push_back(s);
     } else if (fx < history.back().fx) {
         stat s{};
         s.fx = fx;
         s.evaluation = e;
-        s.time = std::chrono::steady_clock::now() - starting_time;
+        s.time = chrono::steady_clock::now() - starting_time;
         history.push_back(s);
     }
 }
 
-std::vector<stats::stat> stats::get_history(){
+vector<stats::stat> stats::get_history(){
     return history;
 }
 
 void stats::reset(){
     history.clear();
-    starting_time = std::chrono::steady_clock::now();
+    starting_time = chrono::steady_clock::now();
 }
