@@ -5,8 +5,8 @@ using namespace std;
 
 problem::problem(size_t dim_, vector<scalar> lower_bound_, vector<scalar> upper_bound_) {
     dim = dim_;
-    lower_bound = move(lower_bound_);
-    upper_bound = move(upper_bound_);
+    lower_bound = std::move(lower_bound_);
+    upper_bound = std::move(upper_bound_);
     problem_structure_is_known = false;
 }
 
@@ -17,7 +17,7 @@ bool problem::is_known_problem_structure() const{
 
 void problem::set_problem_structure(vector<set<size_t>> sub_problems_){
     sub_problems.clear();
-    sub_problems = move(sub_problems_);
+    sub_problems = std::move(sub_problems_);
     problem_structure_is_known = true;
 }
 
