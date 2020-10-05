@@ -5,13 +5,20 @@ cmake_minimum_required(VERSION 3.9)
 project(decomposition_library VERSION 0.0.1)
 set(CMAKE_CXX_STANDARD 11)
 
+# CMake dependencies for installer
+include(CMakePackageConfigHelpers)
+include(GNUInstallDirs)
+
+# Include CPM to find or download packages
+# Note that CPM will try to find the packages locally before downloading them
+# This avoids ODR problems
 option(CPM_USE_LOCAL_PACKAGES "Try `find_package` before downloading dependencies" ON)
 include(cmake/CPM.cmake)
 
 # Check if this a master project or a subdirectory of another project
 if (${CMAKE_CURRENT_SOURCE_DIR} STREQUAL ${CMAKE_SOURCE_DIR})
     set(MASTER_PROJECT ON)
-else()
+else ()
     set(MASTER_PROJECT OFF)
 endif ()
 message("MASTER_PROJECT=${MASTER_PROJECT}")
