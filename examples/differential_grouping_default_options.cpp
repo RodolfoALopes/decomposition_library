@@ -1,13 +1,15 @@
-#include "problem.h"
-#include "differential_grouping_method.h"
+#include <decomposition/differential_grouping_method.h>
+#include <decomposition/problem.h>
 
 using namespace decompose;
 
 class problem_example : public problem {
-public:
+  public:
     using super = problem;
 
-    explicit problem_example(size_t dim, vector<scalar> lower_bound, vector<scalar> upper_bound) : super(dim, std::move(lower_bound), std::move(upper_bound)) {}
+    explicit problem_example(size_t dim, vector<scalar> lower_bound,
+                             vector<scalar> upper_bound)
+        : super(dim, std::move(lower_bound), std::move(upper_bound)) {}
 
     scalar value(const vector<scalar> &x) override {
         scalar sum = 0.0;
