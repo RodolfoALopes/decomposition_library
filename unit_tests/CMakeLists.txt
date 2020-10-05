@@ -1,0 +1,38 @@
+# Differential Grouping - Unit Test
+add_executable(differential_grouping_test differential_grouping_test.cpp)
+target_link_libraries(differential_grouping_test PUBLIC catch_main libdecomposition)
+
+
+# Differential Grouping 2 - Separable Problem - Unit Test
+add_executable(differential_grouping_2_test differential_grouping_2_test.cpp)
+target_link_libraries(differential_grouping_2_test PUBLIC catch_main libdecomposition)
+
+
+# Extended Differential Grouping - Unit Test
+add_executable(extended_differential_grouping_test extended_differential_grouping_test.cpp)
+target_link_libraries(extended_differential_grouping_test PUBLIC catch_main libdecomposition)
+
+
+# Fast Interdependency Identification - Unit Test
+add_executable(fast_interdependency_identification_test fast_interdependency_identification_test.cpp)
+target_link_libraries(fast_interdependency_identification_test PUBLIC catch_main libdecomposition)
+
+
+# Global Differential Grouping - Unit Test
+add_executable(global_differential_grouping_test global_differential_grouping_test.cpp)
+target_link_libraries(global_differential_grouping_test PUBLIC catch_main libdecomposition)
+
+
+# Recursive Differential Grouping 1 - Unit Test
+add_executable(recursive_differential_grouping_1_test recursive_differential_grouping_1_test.cpp)
+target_link_libraries(recursive_differential_grouping_1_test PUBLIC catch_main libdecomposition)
+
+
+# Recursive Differential Grouping 2 - Unit Test
+add_executable(recursive_differential_grouping_2_test recursive_differential_grouping_2_test.cpp)
+target_link_libraries(recursive_differential_grouping_2_test PUBLIC catch_main libdecomposition)
+
+
+# Recursive Differential Grouping 3 - Unit Test
+add_executable(recursive_differential_grouping_3_test recursive_differential_grouping_3_test.cpp)
+target_link_libraries(recursive_differential_grouping_3_test PUBLIC catch_main libdecomposition)
