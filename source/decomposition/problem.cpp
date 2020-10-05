@@ -17,7 +17,7 @@ bool problem::is_known_problem_structure() const{
 
 void problem::set_problem_structure(vector<set<size_t>> sub_problems_){
     sub_problems.clear();
-    sub_problems = std::move(sub_problems_);
+    sub_problems = sub_problems_;
     problem_structure_is_known = true;
 }
 
@@ -39,14 +39,14 @@ vector<scalar> problem::get_upper_bound(){
 
 string problem::print_sub_problem_structure(){
     string structure = "[";
-    for(auto & sub_problem : sub_problems){
+    for(size_t i = 0; i < sub_problems.size(); i++){
         structure += "[";
-        auto it = sub_problem.begin();
+        auto it = sub_problems[i].begin();
         bool print = true;
         while(print && !sub_problems.empty()){
             structure += to_string(*it);
             it++;
-            if(it != sub_problem.end()){
+            if(it != sub_problems[i].end()){
                 structure += ", ";
             }
             else{
