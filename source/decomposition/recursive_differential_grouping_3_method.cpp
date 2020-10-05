@@ -40,7 +40,7 @@ pair<set<size_t>, set<size_t>> recursive_differential_grouping_3_method::interac
             sub_1.insert(*sub_2.begin());
             sub_2.clear();
         }else{
-            size_t k = floor((scalar)sub_2.size() / 2);
+            auto k = (size_t)floor((scalar)sub_2.size() / 2);
             size_t k_max = sub_2.size();
             set<size_t> sub_2_1, sub_2_2;
             size_t cont = 1;
