@@ -6,6 +6,9 @@
 #include <decomposition/recursive_differential_grouping_1_method.h>
 #include <iostream>
 
+using namespace decompose;
+using namespace std;
+
 TEST_CASE("Recursive Differential Grouping 1 - Separable Problem - Unit Test") {
     const string problem_structure = "[[0][1][2][3][4][5][6][7][8][9]]";
     const size_t dim = 10;

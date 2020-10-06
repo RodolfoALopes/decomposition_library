@@ -2,26 +2,27 @@
 #include <decomposition/problem.h>
 
 using namespace decompose;
+using namespace std;
 
 class problem_example : public problem {
-  public:
-    using super = problem;
+    public:
+        using super = problem;
 
-    explicit problem_example(size_t dim, vector<scalar> lower_bound,
-                             vector<scalar> upper_bound)
-        : super(dim, std::move(lower_bound), std::move(upper_bound)) {}
+        explicit problem_example(size_t dim, vector<scalar> lower_bound,
+                                 vector<scalar> upper_bound)
+            : super(dim, std::move(lower_bound), std::move(upper_bound)) {}
 
-    scalar value(const vector<scalar> &x) override {
-        scalar sum = 0.0;
-        for(int i = 0; i < dim; i++){
-            if(i % 3 == 0){
-                sum += pow(x[i], 2) * pow(x[(i+1) % dim], 2);
-            } else{
-                sum += pow(x[i], 2);
+        scalar value(const vector<scalar> &x) override {
+            scalar sum = 0.0;
+            for(size_t i = 0; i < dim; i++){
+                if(i % 3 == 0){
+                    sum += pow(x[i], 2) * pow(x[(i+1) % dim], 2);
+                } else{
+                    sum += pow(x[i], 2);
+                }
             }
+            return sum;
         }
-        return sum;
-    }
 };
 
 

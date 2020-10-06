@@ -5,13 +5,13 @@
 
 namespace decompose {
     class fast_interdependency_identification_method : public decomposition {
-    public:
-        fast_interdependency_identification_method() = default;
+        public:
+            fast_interdependency_identification_method() = default;
 
-        void analyze(problem &problem_, options &options_, criteria &criteria_) override;
+            void analyze(problem &problem_, options &options_, criteria &criteria_) override;
 
-    protected:
-        static void diff(problem &problem_, vector<scalar> &x, scalar delta, const set<size_t>& indices, vector<scalar> &v, criteria &criteria_);
+        protected:
+            static void diff(problem &problem_, std::vector<scalar> &x, scalar delta, const std::set<size_t>& indices, std::vector<scalar> &v, criteria &criteria_);
     };
 }
 

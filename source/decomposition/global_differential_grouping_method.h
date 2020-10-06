@@ -5,13 +5,13 @@
 
 namespace decompose {
     class global_differential_grouping_method : public decomposition {
-    public:
-        global_differential_grouping_method() = default;
+        public:
+            global_differential_grouping_method() = default;
 
-        void analyze(problem &problem_, options &options_, criteria &criteria_) override;
+            void analyze(problem &problem_, options &options_, criteria &criteria_) override;
 
-    protected:
-        static void generate_random_solution(problem &problem_, vector<scalar> &x, const size_t dim);
+        protected:
+            static void generate_random_solution(problem &problem_, std::vector<scalar> &x, size_t dim);
     };
 }
 

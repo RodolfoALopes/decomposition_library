@@ -3,6 +3,7 @@
 #include "differential_grouping_2_method.h"
 
 using namespace decompose;
+using namespace std;
 
 void differential_grouping_2_method::ism(problem &problem_, const size_t dim, scalar &fx_base, criteria &criteria_){
     matrix_f = vector<vector<scalar>>(dim, vector<scalar>(dim, std::nan("")));

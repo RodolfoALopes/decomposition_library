@@ -14,6 +14,9 @@ add_library(libdecomposition
         decomposition/recursive_differential_grouping_1_method.h
         decomposition/recursive_differential_grouping_2_method.h
         decomposition/recursive_differential_grouping_3_method.h
+        decomposition/common.cpp
+        decomposition/problem.cpp
+        decomposition/solver.cpp
         decomposition/differential_grouping_method.cpp
         decomposition/differential_grouping_2_method.cpp
         decomposition/extended_differential_grouping_method.cpp
@@ -39,6 +42,11 @@ if (BUILD_WITH_PEDANTIC_WARNINGS)
         target_compile_options(libdecomposition INTERFACE -Wall -Wextra -pedantic -Werror -Wno-self-assign-overloaded)
     endif ()
 endif ()
+
+if(MSVC)
+    # Allow exceptions
+    target_compile_options(libdecomposition PRIVATE /EHsc)
+endif()
 
 
 #######################################################

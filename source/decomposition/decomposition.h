@@ -6,20 +6,17 @@
 #include <functional>
 #include <set>
 
-using namespace std;
-
 namespace decompose {
     class decomposition {
-      protected:
-        debug_level m_debug = debug_level::None;
+        protected:
+            debug_level m_debug = debug_level::None;
 
-      public:
-        virtual ~decomposition() = default;
+        public:
+            virtual ~decomposition() = default;
 
-        decomposition() = default;
+            decomposition() = default;
 
-        virtual void analyze(problem &problem_, options &options_, criteria &criteria_) = 0;
-
+            virtual void analyze(problem &problem_, options &options_, criteria &criteria_) = 0;
     };
 }
 #endif

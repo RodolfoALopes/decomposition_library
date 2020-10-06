@@ -1,6 +1,13 @@
 #include "recursive_differential_grouping_1_method.h"
 
 using namespace decompose;
+using namespace std;
+
+recursive_differential_grouping_1_method::recursive_differential_grouping_1_method() {
+    y1 = 0;
+    dim = 0;
+    epsilon = 0;
+}
 
 void recursive_differential_grouping_1_method::generate_random_solution(problem &problem_, vector<scalar> &x) const {
     for (size_t i = 0; i < dim; i++) {
@@ -33,7 +40,7 @@ pair<set<size_t>, set<size_t>> recursive_differential_grouping_1_method::interac
             sub_1.insert(*sub_2.begin());
             sub_2.clear();
         }else{
-            size_t k = floor(sub_2.size() / 2);
+            auto k = (size_t)floor((scalar)sub_2.size() / 2);
             size_t k_max = sub_2.size();
             set<size_t> sub_2_1, sub_2_2;
             size_t cont = 1;
