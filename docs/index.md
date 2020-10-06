@@ -22,8 +22,8 @@ Decomposition methods are useful components of optimization algorithms. This pro
 
 
 - [Examples](examples.md)
-    - [Implementing an Optimization Problem](examples/implementing-an-optimization-problem.md)
-    - [Executing an Decomposition Method:](examples/executing-an-decomposition-method.md)
+  - [Implementing an Optimization Problem](examples/implementing-an-optimization-problem.md)
+  - [Executing an Decomposition Method:](examples/executing-an-decomposition-method.md)
 - [Integration](integration.md)
   - [Dependencies](integration/dependencies.md)
 - [How it works](how-it-works.md)

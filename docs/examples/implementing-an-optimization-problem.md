@@ -4,7 +4,6 @@ title: Implementing an Optimization Problem
 nav_order: 1
 has_children: false
 parent: Examples
-grand_parent: 
 has_toc: false
 ---
 # Implementing an Optimization Problem

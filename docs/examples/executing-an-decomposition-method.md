@@ -4,7 +4,6 @@ title: Executing an Decomposition Method:
 nav_order: 2
 has_children: false
 parent: Examples
-grand_parent: 
 has_toc: false
 ---
 # Executing an Decomposition Method:

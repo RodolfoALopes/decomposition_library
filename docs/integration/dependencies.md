@@ -8,7 +8,7 @@ has_toc: false
 ---
 # Dependencies
 
-C++ 17
+C++11
 
 Cmake - Minimal Version 3.9
 
