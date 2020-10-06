@@ -35,13 +35,18 @@ target_include_directories(libdecomposition
 
 if (BUILD_WITH_PEDANTIC_WARNINGS)
     if (MSVC)
-        target_compile_options(libdecomposition INTERFACE /W4 /WX /EHsc)
+        target_compile_options(libdecomposition INTERFACE /W4 /WX)
     else ()
         # -Wno-self-assign-overloaded has a false positive that prevents pybind11
         # from working
         target_compile_options(libdecomposition INTERFACE -Wall -Wextra -pedantic -Werror -Wno-self-assign-overloaded)
     endif ()
 endif ()
+
+if(MSVC)
+    # Allow exceptions
+    target_compile_options(libdecomposition PRIVATE /EHsc)
+endif()
 
 
 #######################################################
