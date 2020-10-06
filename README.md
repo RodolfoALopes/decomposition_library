@@ -1,28 +1,20 @@
-# Decomposition C++ Library
+# Decomposition Library
 
-## Description
-This project is a decomposition C++ library for continuous optimization problems.
+> A C++ library to decompose variables in optimization problems
 
-## Computational Architecture
+<!-- ⚠️ Later replace with a better image. Some visualization from matplotlib would do. ⚠️ -->
+![Decomposition](https://w7.pngwing.com/pngs/318/666/png-transparent-analysis-chart-decomposition-decomposition-analysis-ppt-chart-blue-text-logo.png)
 
-### Requirements
-C++ 17
+<br/>
 
-Cmake - Minimal Version 3.9
+<!-- ⚠️ Later replace with a better text: problem, why it's useful, why it's unsolved, what this lib does ⚠️ -->
+Decomposition methods are useful components of optimization algorithms. This project is a C++ decomposition library for continuous optimization problems.
 
-### Class Diagram
-![Class Diagram](images/class_diagram.png)
-
-## Static Decomposition Methods
-- Differential Grouping (DG) [1]
-- Differential Grouping 2 (DG2) [2]
-- Extended Differential Grouping (XGD) [3]
-- Fast Interdependency Identification (FII) [4]
-- Global Differential Grouping (GDG) [5]
-- Recursive Differential Grouping (RDG) [6]
-- Recursive Differential Grouping 2 (RDG2) [7]
-- Recursive Differential Grouping 1 (RDG3) [8]
-
+ <br/>
+ 
+ <!-- START doctoc generated TOC please keep comment here to allow auto update -->
+ <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+ <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 ## Examples
 
@@ -106,7 +98,48 @@ int main(){
 }
 ```
 
+## Integration
+
+### Dependencies
+
+C++ 17
+
+Cmake - Minimal Version 3.9
+
+## How it works
+
+![Class Diagram](images/class_diagram.png)
+
+### Static Decomposition Methods
+- Differential Grouping (DG) [1]
+- Differential Grouping 2 (DG2) [2]
+- Extended Differential Grouping (XGD) [3]
+- Fast Interdependency Identification (FII) [4]
+- Global Differential Grouping (GDG) [5]
+- Recursive Differential Grouping (RDG) [6]
+- Recursive Differential Grouping 2 (RDG2) [7]
+- Recursive Differential Grouping 1 (RDG3) [8]
+
+## Contributing
+
+PRs are welcome. If contributing with code, please leave the pedantic mode ON (`-DBUILD_WITH_PEDANTIC_WARNINGS=ON`), use [cppcheck](http://cppcheck.sourceforge.net), and [clang-format](https://clang.llvm.org/docs/ClangFormat.html).
+
+<details>
+    <summary>Example: CLion</summary>
+    
+![CLion Settings with Pedantic Mode](docs/images/pedantic_clion.png)
+    
+</details>
+
+### Collaborators and Contributors
+
+<!-- readme: collaborators,contributors -start --> 
+<!-- readme: collaborators,contributors -end -->
+
 ## References
+
+These are some references we used for this work.
+
 [1] M. N. Omidvar, X. Li, Y. Mei and X. Yao, Cooperative Co-Evolution With Differential Grouping for Large Scale Optimization, in IEEE Transactions on Evolutionary Computation, vol. 18, no. 3, pp. 378-393, June 2014, doi: 10.1109/TEVC.2013.2281543.
 
 [2] M. N. Omidvar, M. Yang, Y. Mei, X. Li and X. Yao, DG2: A Faster and More Accurate Differential Grouping for Large-Scale Black-Box Optimization, in IEEE Transactions on Evolutionary Computation, vol. 21, no. 6, pp. 929-942, Dec. 2017, doi: 10.1109/TEVC.2017.2694221.
