@@ -20,13 +20,9 @@ namespace decompose {
         FOptimum
     };
 
-    inline scalar max_limits() { return std::numeric_limits<scalar>::max(); }
+    scalar max_limits();
 
-    inline std::default_random_engine &default_generator() {
-        static std::default_random_engine generator_(
-            (int)std::chrono::system_clock::now().time_since_epoch().count());
-        return generator_;
-    }
+    std::default_random_engine &default_generator();
 
     class options{
         protected:

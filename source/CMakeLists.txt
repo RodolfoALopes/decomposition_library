@@ -35,7 +35,7 @@ target_include_directories(libdecomposition
 
 if (BUILD_WITH_PEDANTIC_WARNINGS)
     if (MSVC)
-        target_compile_options(libdecomposition INTERFACE /W4 /WX)
+        target_compile_options(libdecomposition INTERFACE /W4 /WX /EHsc)
     else ()
         # -Wno-self-assign-overloaded has a false positive that prevents pybind11
         # from working

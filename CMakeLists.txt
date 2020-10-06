@@ -90,7 +90,7 @@ if (BUILD_INSTALLER AND BUILD_PACKAGE)
 
     # The most common cpack variables
     set(CPACK_PACKAGE_NAME "Decomposition")
-    set(CPACK_PACKAGE_VENDOR "https://github.com/alandefreitas")
+    set(CPACK_PACKAGE_VENDOR "https://github.com/RodolfoALopes")
     set(CPACK_PACKAGE_DESCRIPTION_SUMMARY "Decomposition Algorithms")
     set(CPACK_PACKAGE_VERSION_MAJOR ${PROJECT_VERSION_MAJOR})
     set(CPACK_PACKAGE_VERSION_MINOR ${PROJECT_VERSION_MINOR})

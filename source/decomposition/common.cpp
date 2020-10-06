@@ -3,6 +3,16 @@
 using namespace decompose;
 using namespace std;
 
+scalar decompose::max_limits() {
+    return std::numeric_limits<scalar>::max();
+}
+
+default_random_engine &decompose::default_generator() {
+    static default_random_engine generator_(
+        (int)chrono::system_clock::now().time_since_epoch().count());
+    return generator_;
+}
+
 options options::defaults() {
     options op_{};
     op_.dg_epsilon = 0.1;
@@ -20,7 +30,7 @@ options options::defaults() {
     return op_;
 }
 
-scalar  options::get_dg_epsilon() const{
+scalar options::get_dg_epsilon() const{
     return dg_epsilon;
 }
 
