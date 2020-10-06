@@ -32,14 +32,14 @@ jobs:
           ls
       - name: Generate Docs
         run: ./mdsplit -r RodolfoALopes/decomposition_library
-      - name: Commit Docs
-        run: |
-          git fetch
-          git pull
-          git add docs
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-          git commit -m "Update Docs" -a
+      - uses: EndBug/add-and-commit@v5 # You can change this to use a specific version
+        with:
+          add: 'docs'
+          author_name: GitHub Action[bot]
+          author_email: action[bot]@github.com
+          message: 'Update Docs'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         continue-on-error: true
       - name: Push changes
         uses: ad-m/github-push-action@master
