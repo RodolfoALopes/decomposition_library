@@ -14,8 +14,7 @@ Decomposition methods are useful components of optimization algorithms. This pro
  
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-<details>
-<summary>Table of Contents</summary>
+**Table of Contents**
 
 - [Examples](#examples)
 - [Integration](#integration)
@@ -26,7 +25,6 @@ Decomposition methods are useful components of optimization algorithms. This pro
   - [Collaborators and Contributors](#collaborators-and-contributors)
 - [References](#references)
 
-</details>
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 ## Examples
