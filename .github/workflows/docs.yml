@@ -16,7 +16,7 @@ jobs:
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           MAX_HEADER_LEVEL: 3
-          FOLDING: true
+          FOLDING: false
       - name: Download mdsplit
         uses: carlosperate/download-file-action@v1.0.3
         id: download-mdsplit
