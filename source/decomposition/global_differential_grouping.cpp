@@ -1,19 +1,20 @@
-#include "global_differential_grouping_method.h"
+#include "global_differential_grouping.h"
 
 using namespace decompose;
 using namespace std;
 
-void global_differential_grouping_method::generate_random_solution(problem &problem_, vector<scalar> &x, const size_t dim){
+void global_differential_grouping::generate_random_solution(
+    optimization_problem &problem_, vector<scalar> &x, const size_t dim){
     for (size_t i = 0; i < dim; i++) {
         uniform_real_distribution<scalar> dist(problem_.get_lower_bound()[i], problem_.get_upper_bound()[i]);
         x[i] = dist(default_generator());
     }
 }
 
-void global_differential_grouping_method::analyze(problem &problem_, options &options_, criteria &criteria_) {
+void global_differential_grouping::decompose(optimization_problem &problem_, options &options_, criteria &criteria_) {
     criteria_.reset();
     vector<set<size_t>> sub_problems;
-    const size_t dim = problem_.get_dim();
+    const size_t dim = problem_.get_dimension();
     size_t k = options_.get_gdg_k();
     const scalar alpha = options_.get_gdg_alpha();
     scalar fx_min = max_limits();

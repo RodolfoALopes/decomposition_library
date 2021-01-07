@@ -4,16 +4,16 @@ using namespace decompose;
 using namespace std;
 
 solver::solver() {
-    stop_ = criteria::defaults();
-    options_ = options::defaults();
-    current_.reset();
+    stop_criteria = criteria::defaults();
+    solver_options = options::defaults();
+    current_criteria.reset();
     m_stats.reset();
 }
 
-solver::solver(criteria &current_criteria, criteria &stop_criteria, options &o) {
-    stop_ = stop_criteria;
-    current_ = current_criteria;
-    options_ = o;
+solver::solver(criteria &current_criteria_, criteria &stop_criteria_, options &options_) {
+    stop_criteria = stop_criteria_;
+    current_criteria = current_criteria_;
+    solver_options = options_;
     m_stats.reset();
 }
 
@@ -21,7 +21,7 @@ const status &solver::get_status() {
     return m_status;
 }
 
-stats &solver::get_stats() {
+stats &solver::get_stats(){
     return m_stats;
 }
 

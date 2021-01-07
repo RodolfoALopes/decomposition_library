@@ -3,28 +3,28 @@
 #######################################################
 add_library(libdecomposition
         decomposition/common.h
-        decomposition/decomposition.h
-        decomposition/problem.h
+        decomposition/decomposition_algorithm.h
+        decomposition/optimization_problem.h
         decomposition/solver.h
-        decomposition/differential_grouping_method.h
-        decomposition/differential_grouping_2_method.h
-        decomposition/extended_differential_grouping_method.h
-        decomposition/fast_interdependency_identification_method.h
-        decomposition/global_differential_grouping_method.h
-        decomposition/recursive_differential_grouping_1_method.h
-        decomposition/recursive_differential_grouping_2_method.h
-        decomposition/recursive_differential_grouping_3_method.h
+        decomposition/differential_grouping.h
+        decomposition/differential_grouping_2.h
+        decomposition/extended_differential_grouping.h
+        decomposition/fast_interdependency_identification.h
+        decomposition/global_differential_grouping.h
+        decomposition/recursive_differential_grouping_1.h
+        decomposition/recursive_differential_grouping_2.h
+        decomposition/recursive_differential_grouping_3.h
         decomposition/common.cpp
-        decomposition/problem.cpp
+        decomposition/optimization_problem.cpp
         decomposition/solver.cpp
-        decomposition/differential_grouping_method.cpp
-        decomposition/differential_grouping_2_method.cpp
-        decomposition/extended_differential_grouping_method.cpp
-        decomposition/fast_interdependency_identification_method.cpp
-        decomposition/global_differential_grouping_method.cpp
-        decomposition/recursive_differential_grouping_1_method.cpp
-        decomposition/recursive_differential_grouping_2_method.cpp
-        decomposition/recursive_differential_grouping_3_method.cpp
+        decomposition/differential_grouping.cpp
+        decomposition/differential_grouping_2.cpp
+        decomposition/extended_differential_grouping.cpp
+        decomposition/fast_interdependency_identification.cpp
+        decomposition/global_differential_grouping.cpp
+        decomposition/recursive_differential_grouping_1.cpp
+        decomposition/recursive_differential_grouping_2.cpp
+        decomposition/recursive_differential_grouping_3.cpp
         )
 
 target_include_directories(libdecomposition PUBLIC ${DECOMPOSITION_LIB_INCLUDE_DIR})

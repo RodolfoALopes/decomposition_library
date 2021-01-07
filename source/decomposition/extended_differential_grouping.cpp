@@ -1,14 +1,14 @@
-#include "problem.h"
+#include "extended_differential_grouping.h"
 #include "common.h"
-#include "extended_differential_grouping_method.h"
+#include "optimization_problem.h"
 
 using namespace decompose;
 using namespace std;
 
-void extended_differential_grouping_method::analyze(problem &problem_, options &options_, criteria &criteria_) {
+void extended_differential_grouping::decompose(optimization_problem &problem_, options &options_, criteria &criteria_) {
     criteria_.reset();
     vector<set<size_t>> sub_problems;
-    const size_t dim = problem_.get_dim();
+    const size_t dim = problem_.get_dimension();
     const scalar epsilon = options_.get_xdg_epsilon();
     vector<vector<bool>> matrix_interaction(dim, vector<bool>(dim, false));
     vector<scalar> x_1(dim, 0.0);

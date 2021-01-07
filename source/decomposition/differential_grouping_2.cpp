@@ -1,11 +1,11 @@
-#include "problem.h"
+#include "differential_grouping_2.h"
 #include "common.h"
-#include "differential_grouping_2_method.h"
+#include "optimization_problem.h"
 
 using namespace decompose;
 using namespace std;
 
-void differential_grouping_2_method::ism(problem &problem_, const size_t dim, scalar &fx_base, criteria &criteria_){
+void differential_grouping_2::ism(optimization_problem &problem_, const size_t dim, scalar &fx_base, criteria &criteria_){
     matrix_f = vector<vector<scalar>>(dim, vector<scalar>(dim, std::nan("")));
     vec_f = vector<scalar>(dim, std::nan(""));
     lambda = vector<vector<scalar>>(dim, vector<scalar>(dim, 0.0));
@@ -43,12 +43,12 @@ void differential_grouping_2_method::ism(problem &problem_, const size_t dim, sc
     }
 }
 
-scalar differential_grouping_2_method::gamma(double d){
+scalar differential_grouping_2::gamma(double d){
     scalar muM = (std::numeric_limits<scalar>::epsilon())/2.0;
     return (d * muM)/(1 - (d * muM));
 }
 
-scalar differential_grouping_2_method::max_element(scalar x1, scalar x2, scalar x3, scalar x4){
+scalar differential_grouping_2::max_element(scalar x1, scalar x2, scalar x3, scalar x4){
     if(x1 >= x2 && x1 >= x3 && x1 >= x4){
         return x1;
     } else if(x2 >= x1 && x2 >= x3 && x2 >= x4){
@@ -60,7 +60,7 @@ scalar differential_grouping_2_method::max_element(scalar x1, scalar x2, scalar 
     }
 }
 
-scalar differential_grouping_2_method::max_element(scalar x1, scalar x2){
+scalar differential_grouping_2::max_element(scalar x1, scalar x2){
     if(x1 >= x2){
         return x1;
     }
@@ -69,7 +69,7 @@ scalar differential_grouping_2_method::max_element(scalar x1, scalar x2){
     }
 }
 
-void differential_grouping_2_method::dsm(const size_t dim, scalar &fx_base){
+void differential_grouping_2::dsm(const size_t dim, scalar &fx_base){
     theta = vector<vector<scalar>>(dim, vector<scalar>(dim, std::nan("")));
     size_t n_0 = 0;
     size_t n_1 = 0;
@@ -110,10 +110,10 @@ void differential_grouping_2_method::dsm(const size_t dim, scalar &fx_base){
     }
 }
 
-void differential_grouping_2_method::analyze(problem &problem_, options &options_, criteria &criteria_) {
+void differential_grouping_2::decompose(optimization_problem &problem_, options &options_, criteria &criteria_) {
     criteria_.reset();
     vector<set<size_t>> sub_problems;
-    const size_t dim = problem_.get_dim();
+    const size_t dim = problem_.get_dimension();
     scalar fx_base = 0.0;
     ism(problem_, dim, fx_base, criteria_);
     dsm(dim, fx_base);

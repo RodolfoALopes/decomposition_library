@@ -1,11 +1,11 @@
-#include "problem.h"
+#include "fast_interdependency_identification.h"
 #include "common.h"
-#include "fast_interdependency_identification_method.h"
+#include "optimization_problem.h"
 
 using namespace decompose;
 using namespace std;
 
-void fast_interdependency_identification_method::diff(problem &problem_, vector<scalar> &x, scalar delta, const set<size_t>& indices, vector<scalar> &v, criteria &criteria_){
+void fast_interdependency_identification::diff(optimization_problem &problem_, vector<scalar> &x, scalar delta, const set<size_t>& indices, vector<scalar> &v, criteria &criteria_){
     scalar value_1 = problem_.value(x);
     criteria_.evaluations++;
     for(unsigned long i : indices){
@@ -18,10 +18,10 @@ void fast_interdependency_identification_method::diff(problem &problem_, vector<
     }
 }
 
-void fast_interdependency_identification_method::analyze(problem &problem_, options &options_, criteria &criteria_) {
+void fast_interdependency_identification::decompose(optimization_problem &problem_, options &options_, criteria &criteria_) {
     criteria_.reset();
     vector<set<size_t>> sub_problems;
-    const size_t dim = problem_.get_dim();
+    const size_t dim = problem_.get_dimension();
     const scalar epsilon_1 = options_.get_fii_epsilon_1();
     const scalar epsilon_2 = options_.get_fii_epsilon_2();
     const scalar sigma = options_.get_fii_sigma();

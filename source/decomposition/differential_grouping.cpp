@@ -1,14 +1,14 @@
+#include "differential_grouping.h"
 #include "common.h"
-#include "problem.h"
-#include "differential_grouping_method.h"
+#include "optimization_problem.h"
 
 using namespace decompose;
 using namespace std;
 
-void differential_grouping_method::analyze(problem &problem_, options &options_, criteria &criteria_) {
+void differential_grouping::decompose(optimization_problem &problem_, options &options_, criteria &criteria_) {
     criteria_.reset();
     vector<set<size_t>> sub_problems;
-    const size_t dim = problem_.get_dim();
+    const size_t dim = problem_.get_dimension();
     const scalar epsilon = options_.get_dg_epsilon();
     set<size_t> dims;
     for(size_t i = 0; i < dim; i++){

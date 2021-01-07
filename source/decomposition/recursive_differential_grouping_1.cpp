@@ -1,22 +1,23 @@
-#include "recursive_differential_grouping_1_method.h"
+#include "recursive_differential_grouping_1.h"
 
 using namespace decompose;
 using namespace std;
 
-recursive_differential_grouping_1_method::recursive_differential_grouping_1_method() {
+recursive_differential_grouping_1::recursive_differential_grouping_1() {
     y1 = 0;
     dim = 0;
     epsilon = 0;
 }
 
-void recursive_differential_grouping_1_method::generate_random_solution(problem &problem_, vector<scalar> &x) const {
+void recursive_differential_grouping_1::generate_random_solution(
+    optimization_problem &problem_, vector<scalar> &x) const {
     for (size_t i = 0; i < dim; i++) {
         uniform_real_distribution<scalar> dist(problem_.get_lower_bound()[i], problem_.get_upper_bound()[i]);
         x[i] = dist(default_generator());
     }
 }
 
-pair<set<size_t>, set<size_t>> recursive_differential_grouping_1_method::interact(problem &problem_, set<size_t> sub_1, set<size_t> sub_2, set<size_t> x_remain){
+pair<set<size_t>, set<size_t>> recursive_differential_grouping_1::interact(optimization_problem &problem_, set<size_t> sub_1, set<size_t> sub_2, set<size_t> x_remain){
     vector<scalar> p2 = problem_.get_lower_bound();
     for(unsigned long it : sub_1){
         p2[it] = problem_.get_upper_bound()[it];
@@ -80,10 +81,10 @@ pair<set<size_t>, set<size_t>> recursive_differential_grouping_1_method::interac
     return result;
 }
 
-void recursive_differential_grouping_1_method::analyze(problem &problem_, options &options_, criteria &criteria_) {
+void recursive_differential_grouping_1::decompose(optimization_problem &problem_, options &options_, criteria &criteria_) {
     current_criteria.reset();
     vector<set<size_t>> sub_problems;
-    dim = problem_.get_dim();
+    dim = problem_.get_dimension();
     size_t k = options_.get_rdg_1_k();
     const scalar alpha = options_.get_rdg_1_alpha();
     scalar fx_min = max_limits();
