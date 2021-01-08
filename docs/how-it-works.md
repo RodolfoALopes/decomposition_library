@@ -10,7 +10,7 @@ has_toc: false
 ![Class Diagram](images/class_diagram.png)
 
 
-- [Static Decomposition Methods](how-it-works/static-decomposition-methods.md)
+- [Decomposition Methods](how-it-works/static-decomposition-methods.md)
 
 
 <!-- Generated with mdsplit: https://github.com/alandefreitas/mdsplit -->

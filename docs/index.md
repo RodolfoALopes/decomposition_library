@@ -27,7 +27,7 @@ Decomposition methods are useful components of optimization algorithms. This pro
 - [Integration](integration.md)
   - [Dependencies](integration/dependencies.md)
 - [How it works](how-it-works.md)
-  - [Static Decomposition Methods](how-it-works/static-decomposition-methods.md)
+  - [Decomposition Methods](how-it-works/static-decomposition-methods.md)
 - [Contributing](contributing.md)
   - [Collaborators and Contributors](contributing/collaborators-and-contributors.md)
 - [References](references.md)

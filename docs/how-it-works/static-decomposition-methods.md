@@ -6,7 +6,7 @@ has_children: false
 parent: How it works
 has_toc: false
 ---
-# Static Decomposition Methods
+# Decomposition Methods
 - Differential Grouping (DG) [1]
 - Differential Grouping 2 (DG2) [2]
 - Extended Differential Grouping (XGD) [3]
