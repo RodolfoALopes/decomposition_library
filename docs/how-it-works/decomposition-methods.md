@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Static Decomposition Methods
+title: Decomposition Methods
 nav_order: 1
 has_children: false
 parent: How it works
