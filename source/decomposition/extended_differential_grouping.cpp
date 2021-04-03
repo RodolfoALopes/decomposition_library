@@ -23,7 +23,7 @@ void extended_differential_grouping::decompose(optimization_problem &problem_, o
             if(!matrix_interaction[i][j]){
                 vector<scalar> x_line_1 = x_1;
                 vector<scalar> x_line_2 = x_2;
-                scalar middle_x = problem_.get_lower_bound()[j] + (problem_.get_upper_bound()[j] + problem_.get_lower_bound()[j]) / 2.0;
+                scalar middle_x = problem_.get_lower_bound()[j] + (problem_.get_upper_bound()[j] - problem_.get_lower_bound()[j]) / 2.0;
                 x_line_1[j] = middle_x;
                 x_line_2[j] = middle_x;
                 scalar delta_2 = problem_.value(x_line_1) - problem_.value(x_line_2);

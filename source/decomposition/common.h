@@ -45,6 +45,10 @@ namespace decompose {
             size_t rdg_1_k;
             // Recursive Differential Grouping 3 - Method
             size_t rdg_3_epsilon_n;
+            // Differential Evolution - Cooperative Coevolutive Method
+            scalar de_cr;
+            size_t de_pop_size;
+            size_t de_cycle;
         public:
             static options defaults();
             scalar get_dg_epsilon() const;
@@ -59,6 +63,9 @@ namespace decompose {
             size_t get_rdg_1_k() const;
             scalar get_rdg_1_alpha() const;
             size_t get_rdg_3_epsilon_n() const;
+            scalar get_de_cr() const;
+            size_t get_de_size_pop() const;
+            size_t get_de_cycle() const;
             void set_dg_epsilon(scalar s);
             void set_fii_epsilon_1(scalar s);
             void set_fii_epsilon_2(scalar s);
@@ -71,6 +78,9 @@ namespace decompose {
             void set_rdg_1_k(size_t s);
             void set_rdg_1_alpha(scalar s);
             void set_rdg_3_epsilon_n(size_t s);
+            void set_de_cr(scalar cr);
+            void set_de_size_pop(size_t cr);
+            void set_de_cycle(size_t cr);
     };
 
     class criteria{

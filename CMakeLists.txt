@@ -27,6 +27,7 @@ set(DECOMPOSITION_ROOT_DIR ${CMAKE_CURRENT_SOURCE_DIR})
 #######################################################
 ### Options                                         ###
 #######################################################
+option(BUILD_EXPERIMENTS "Compile the experiments" ${MASTER_PROJECT})
 option(BUILD_EXAMPLES "Compile the examples" ${MASTER_PROJECT})
 option(BUILD_TESTS "Compile the tests" ${MASTER_PROJECT})
 option(BUILD_INSTALLER "Build an installation package" ${MASTER_PROJECT})
@@ -38,6 +39,11 @@ option(BUILD_WITH_PEDANTIC_WARNINGS "Use pedantic warnings. This is useful for d
 ### Build targets                                   ###
 #######################################################
 add_subdirectory(source)
+add_subdirectory(external)
+
+if (BUILD_EXPERIMENTS)
+    add_subdirectory(experiments)
+endif ()
 
 if (BUILD_EXAMPLES)
     add_subdirectory(examples)

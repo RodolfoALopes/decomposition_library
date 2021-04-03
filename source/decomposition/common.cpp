@@ -27,6 +27,9 @@ options options::defaults() {
     op_.rdg_1_alpha = 1e-12;
     op_.rdg_1_k = 10;
     op_.rdg_3_epsilon_n = 50;
+    op_.de_cr = 0.9;
+    op_.de_pop_size = 100;
+    op_.de_cycle = 1000;
     return op_;
 }
 
@@ -126,6 +129,29 @@ void options::set_rdg_3_epsilon_n(size_t s){
     rdg_3_epsilon_n = s;
 }
 
+scalar options::get_de_cr() const {
+    return de_cr;
+}
+
+void options::set_de_cr(scalar cr){
+    de_cr = cr;
+}
+
+size_t options::get_de_size_pop()const {
+    return de_pop_size;
+}
+
+void options::set_de_size_pop(size_t s){
+    de_pop_size = s;
+}
+
+size_t options::get_de_cycle() const {
+    return de_cycle;
+}
+
+void options::set_de_cycle(size_t c){
+    de_cycle = c;
+}
 
 criteria::criteria() {
     reset();
