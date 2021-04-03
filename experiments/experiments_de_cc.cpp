@@ -137,7 +137,7 @@ void save_results(const string &id_version, size_t id_func, size_t id_rep, vecto
 
 int main() {
     const size_t max_id_function = 15;
-    const size_t max_rep = 1;
+    const size_t max_rep = 30;
     string methods[] = {"DG", "DG2", "XDG", "FII", "GDG", "RDG", "RDG2", "RDG3"};
 
     for(size_t id_function = 1; id_function <= max_id_function; id_function++){
